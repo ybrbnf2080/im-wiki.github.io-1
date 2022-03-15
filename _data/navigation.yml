@@ -1,0 +1,180 @@
+main:
+  - title: "Канал с новостями"
+    url: https://t.me/imwiki
+    icon: /assets/images/telegramBlack.png
+
+docs:
+  - title: Страны по ИЧР
+    children:
+      - title: Австралия
+        url: /country/australia
+      - title: Австрия
+        url: /country/austria
+      - title: Албания
+        url: /country/albania
+      - title: Алжир
+        url: /country/algeria
+      - title: Аргентина
+        url: /country/argentina
+      - title: Бангладеш
+        url: /country/bangladesh
+      - title: Белиз
+        url: /country/belize
+      - title: Бельгия
+        url: /country/belgium
+      - title: Болгария
+        url: /country/bulgaria
+      - title: Босния и Герцеговина
+        url: /country/bosniaandherzegovina
+      - title: Бразилия
+        url: /country/brazil
+      - title: Великобритания
+        url: /country/unitedkingdom
+      - title: Венгрия
+        url: /country/hungary
+      - title: Вьетнам
+        url: /country/vietnam
+      - title: Германия
+        url: /country/germany
+      - title: Гонконг
+        url: /country/hongkong
+      - title: Греция
+        url: /country/greece
+      - title: Грузия
+        url: /country/georgia
+      - title: Дания
+        url: /country/denmark
+      - title: Доминикана
+        url: /country/dominicanrepublic
+      - title: Египет
+        url: /country/egypt
+      - title: Израиль
+        url: /country/israel
+      - title: Индия
+        url: /country/india
+      - title: Индонезия
+        url: /country/indonesia
+      - title: Иордания
+        url: /country/jordan
+      - title: Ирландия
+        url: /country/ireland
+      - title: Исландия
+        url: /country/iceland
+      - title: Испания
+        url: /country/spain
+      - title: Италия
+        url: /country/italy
+      - title: Казахстан
+        url: /country/kazakhstan
+      - title: Камбоджа
+        url: /country/cambodia
+      - title: Канада
+        url: /country/canada
+      - title: Катар
+        url: /country/qatar
+      - title: Кипр
+        url: /country/cyprus
+      - title: Китай
+        url: /country/china
+      - title: Колумбия
+        url: /country/colombia
+      - title: Коста-Рика
+        url: /country/costarica
+      - title: Куба
+        url: /country/cuba
+      - title: Кувейт
+        url: /country/kuwait
+      - title: Кыргызстан
+        url: /country/kyrgyzstan
+      - title: Латвия
+        url: /country/latvia
+      - title: Ливан
+        url: /country/lebanon
+      - title: Литва
+        url: /country/lithuania
+      - title: Малайзия
+        url: /country/malaysia
+      - title: Мальдивы
+        url: /country/maldives
+      - title: Мальта
+        url: /country/malta
+      - title: Марокко
+        url: /country/morocco
+      - title: Мексика
+        url: /country/mexico
+      - title: Монголия
+        url: /country/mongolia
+      - title: Нидерланды
+        url: /country/netherlands
+      - title: Новая Зеландия
+        url: /country/newzealand
+      - title: Норвегия
+        url: /country/norway
+      - title: ОАЭ
+        url: /country/unitedarabemirates
+      - title: Панама
+        url: /country/panama
+      - title: Парагвай
+        url: /country/paraguay
+      - title: Перу
+        url: /country/peru
+      - title: Польша
+        url: /country/poland
+      - title: Португалия
+        url: /country/portugal
+      - title: Румыния
+        url: /country/romania
+      - title: Саудовская Аравия
+        url: /country/saudiarabia
+      - title: Сейшелы
+        url: /country/seychelles
+      - title: Сербия
+        url: /country/serbia
+      - title: Серверная Македония
+        url: /country/northmacedonia
+      - title: Сингапур
+        url: /country/singapore
+      - title: Словакия
+        url: /country/slovakia
+      - title: Словения
+        url: /country/slovenia
+      - title: США
+        url: /country/unitedstates
+      - title: Таиланд
+        url: /country/thailand
+      - title: Тунис
+        url: /country/tunisia
+      - title: Турция
+        url: /country/turkey
+      - title: Уругвай
+        url: /country/uruguay
+      - title: Филиппины
+        url: /country/philippines
+      - title: Финляндия
+        url: /country/finland
+      - title: Франция
+        url: /country/france
+      - title: Хорватия
+        url: /country/croatia
+      - title: Черногория
+        url: /country/montenegro
+      - title: Чехия
+        url: /country/czechrepublic
+      - title: Чили
+        url: /country/chile
+      - title: Швейцария
+        url: /country/switzerland
+      - title: Швеция
+        url: /country/sweden
+      - title: Шри-Ланка
+        url: /country/srilanka
+      - title: Эквадор
+        url: /country/ecuador
+      - title: Эстония
+        url: /country/estonia
+      - title: ЮАР
+        url: /country/southafrica
+      - title: Южная Корея
+        url: /country/southkorea
+      - title: Япония
+        url: /country/japan

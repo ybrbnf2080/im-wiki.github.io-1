@@ -1,0 +1,186 @@
+<script>
+  function modalView(a) {
+    let pointBut = a.parentElement; //document.getElementById(a).parentElement;
+    let question = pointBut.previousElementSibling.previousElementSibling;
+    let response = pointBut.previousElementSibling;
+    window.nodeReduct = typeof nodeReduct == "undefined" ? "lol" : nodeReduct;
+    if (nodeReduct != question) {
+      document.getElementById("insert-modal").value = response.textContent;
+    }
+    if (
+      document.getElementById("insert-modal").value ==
+      "У нас пока нет ответа на данный вопрос. Вы можете предложить свой вариант."
+    ) {
+      document.getElementById("insert-modal").value = "";
+    }
+
+    document.getElementById("inputModalLabel").innerHTML =
+      question.textContent;
+    window.nodeReduct = question;
+  }
+  async function modalSubmit() {
+    let url = document.URL;
+    const modalLable = document.getElementById("inputModalLabel");
+    let question = modalLable.textContent;
+    let response = document.getElementById("insert-modal").value;
+
+
+    
+    try {
+      document.getElementsByClassName('dark-loader')[0].style.display = "flex";
+      
+          await fetch(
+            "https://im-wiki-bot.herokuapp.com/?url='" +
+              url +
+              "'&question=" +
+              question +
+              "&response=" +
+              response
+          );
+          document.getElementsByClassName('dark-loader')[0].style.display = "none";
+      nodeReduct.innerHTML =
+        "✅ <b>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</b><br>" +
+        nodeReduct.textContent;
+        const modalComplete = document.getElementById("completeModal")
+            const modalco= new bootstrap.Modal(modalComplete) 
+            modalco.toggle()
+      var modalInstance = bootstrap.Modal.getInstance(document.getElementById("inputModal"));
+      modalInstance.hide();
+    } catch {
+      document.getElementsByClassName('dark-loader')[0].style.display = "none";
+      const modalErr = document.getElementById("errorModal");
+      const modaler = new bootstrap.Modal(modalErr);
+      modaler.toggle();
+      console.error("error response to bot");
+      return 0;
+    }
+  }
+</script>
+
+<!-- Complete Modal -->
+<div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="completeModalLabel" aria-hidden="true" style="z-index: 999999999999999;">
+    <div class="modal-dialog ">
+        <div class="modal-content" style="width: 60% !important; height: auto; display: flex; ">
+            <div class="modal-header">
+                <h5 class="modal-title" id="completeModalLabel">Успех!</h5>
+            </div>
+            <div class="modal-body" id="">
+                Данные отправленны, подождите пока волонтёры сделают изменения. Вопросы вы можете задать в <a href="https://t.me/+FHi3FnJaoWJkMDAx">РАБОЧЕЙ ГРУППЕ</a>.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="
+                  const modal = document.getElementById('inputModal');
+                  const modalInstance = bootstrap.Modal.getInstance(modal);
+                  modalInstance.hide();
+                ">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div
+  class="modal fade"
+  id="errorModal"
+  tabindex="-1"
+  aria-labelledby="errorModalLabel"
+  aria-hidden="true"
+  style="z-index: 999999999999999"
+>
+  <div class="modal-dialog">
+    <div
+      class="modal-content"
+      style="width: 60% !important; height: auto; display: flex"
+    >
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">Ошибка соединения!</h5>
+      </div>
+      <div class="modal-body" id="">
+        Что-то пошло не так. Проверьте подключение к интернету. Если проблемма повторится - напишите в нашу <a href="https://t.me/+FHi3FnJaoWJkMDAx">РАБОЧУЮ ГРУППУ</a>.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Закрыть
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Input Modal -->
+<div
+  class="modal fade"
+  id="inputModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="inputModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="inputModalLabel"></h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body" id="insert">
+        <textarea name="" id="insert-modal" cols="30" rows="10"> </textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Закрыть
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="button-submit"
+          onclick="modalSubmit()"
+        >
+          Отправить
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<style>
+.dark-loader {
+    display:none;
+    position:fixed;
+    width:100%;
+    height:100%;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.7);
+    z-index:100000000000000000;
+}
+
+.dark-loader-overlay {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+
+.dark-loader-lcon {
+   width:300px;
+   height:500px;
+   z-index:2;
+}
+</style>
+<div class="dark-loader">
+<div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+     <div class="dark-loader-overlay"></div>
+</div>
