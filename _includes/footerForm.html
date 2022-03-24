@@ -1,0 +1,51 @@
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById("question")
+        if (form){
+            form.addEventListener("submit", async function(e) {
+                var email = document.getElementById('email').value;
+                var question = document.getElementById('questionarea').value;
+                let url = document.URL;
+                e.preventDefault();
+                
+                if (question.value == "") {
+                    alert('Пожалуйста введите вопрос.');
+                    question.focus();
+                    e.preventDefault(); // stop form submission
+                }
+                try {
+                    await fetch(
+                        "https://im-wiki-bot.herokuapp.com/?url='" +
+                        url +
+                        "'&question=" +
+                        question +
+                        "&response=" +
+                        email
+                    );
+                    alert("Вопрос отправлен")
+                    
+                    question = ""
+                } catch (e) {
+                    console.error(e)
+                }
+                
+            });
+        }
+    
+    });
+</script>
+
+<div >
+    <h2>У вас есть какой то вопрос?</h2>
+    <form action="what" id="question" style="border-radius: 10px;">
+
+        Введите вопрос:
+        <textarea name="" value="" id="questionarea" cols="30" rows="10"></textarea>
+        Почта:
+        <input type="email" name="" placeholder="Введите свою почту." id="email" >
+
+        <button type="submit" class="btn btn-dark btn-sm" style="margin: 10px">Отправить</button>
+      </form>
+      
+</div>
